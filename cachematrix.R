@@ -1,7 +1,11 @@
 ## Put comments here that give an overall description of what your
 ## functions do
+## These functions help to create objects and cached functionality for larger equations
+## This helps with overall performance on a more scalable level as programs get bigger
 
 ## Write a short comment describing this function
+## The makeCacheMatrix creates an empty matrix and then stores the matrix passed
+## into the function.  It sets the inverse as NULL and creates get and set functions
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -21,7 +25,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
-
+## This function first gets the matrix then checks if the inverse is cached or not
+## if it is NULL then it creates the inverse and returns it
 cacheSolve <- function(x, ...) {
   
     i <- x$getinverse()
